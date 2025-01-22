@@ -1,38 +1,204 @@
-.App {
+/* Ogólne stylizacje */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #374a53;
+  color: #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2, h3 {
+  color: #0097b2;
+}
+
+g{
+  color: #000000;
+}
+
+/* Stylizacja kalendarza */
+.fc-toolbar {
+  background-color: #0097b2;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.fc-toolbar h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.fc-daygrid-event {
+  background-color: #0097b2;
+  color: #000000;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.fc-daygrid-day:hover {
+  background-color: #759496;
+}
+
+/* Formularz rezerwacji */
+form {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+form h2 {
+  color: #0097b2;
+}
+
+form input, form button {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form input {
+  background-color: #7b86876c;
+  color: #000000;
+}
+
+form button {
+  background-color: #0097b2;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #011233;
+}
+
+/* Panel administracyjny */
+.admin-panel {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+  width: 90%;
+}
+
+.admin-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.admin-panel table th, .admin-panel table td {
+  border: 1px solid #555555;
+  padding: 10px;
+  text-align: left;
+  color: #000000;
+}
+
+.admin-panel table th {
+  background-color: #0097b2;
+}
+
+.admin-panel table td {
+  background-color: #7b86876c;
+}
+
+.admin-panel table button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-right: 10px; /* Dodanie odstępu między przyciskami */
+}
+
+.admin-panel table button:last-child {
+  margin-right: 0; /* Usuń margines dla ostatniego przycisku w rzędzie */
+}
+
+.admin-panel table button:hover {
+  background-color: #570d0d;
+}
+
+/* Detale rezerwacji */
+.reservation-details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #0097b2;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.reservation-details h3 {
+  color: #0097b2;
+}
+
+.reservation-details p {
+  margin: 5px 0;
+}
+
+.reservation-details button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reservation-details button:hover {
+  background-color: #c0392b;
+}
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Wyrównanie elementów w pionie */
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  text-align: center; /* Tekst w nagłówku wyśrodkowany */
+  margin: 20px 0; /* Opcjonalny odstęp od góry i dołu */
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 200px; /* Możesz dostosować wielkość logo */
+  height: 200px;
+  margin-right: 50px; /* Odstęp między logo a tekstem */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  margin: 0; /* Usunięcie domyślnego marginesu h1 */
+}
+/* Stylizacja przycisku */
+.admin-button {
+  background-color: #0097b2; /* Kolor tła */
+  color: #fff; /* Kolor tekstu */
+  border: none; /* Usuń obramowanie */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  padding: 10px 20px; /* Wewnętrzne odstępy */
+  font-size: 16px; /* Rozmiar tekstu */
+  font-weight: bold; /* Pogrubiony tekst */
+  cursor: pointer; /* Zmiana kursora na rękę */
+  transition: background-color 0.3s ease; /* Efekt przejścia */
+}
+
+/* Stylizacja przycisku po najechaniu myszką */
+.admin-button:hover {
+  background-color: #011233; /* Ciemniejszy kolor tła */
 }
